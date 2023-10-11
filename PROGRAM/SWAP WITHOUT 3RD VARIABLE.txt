@@ -1,0 +1,22 @@
+/* SWAP WITHOUT 3RD VARIABLE */
+
+DECLARE
+	A INT;
+	B INT;
+BEGIN
+	A := &A;
+	B := &B;
+	DBMS_OUTPUT.PUT_LINE(' A AND B BFORE SWAP : ' || A || '  '  || B);
+	A := A+B ;
+	B := A-B ;
+	A := A-B ;
+	DBMS_OUTPUT.PUT_LINE(' A AND B AFTER SWAP : ' || A || '  '  || B);
+END;
+
+OUTPUT :
+
+ENTER VALUE FOR A : 6
+ENTER VALUE FOR B : 5
+
+A AND B BFORE SWAP :  6  5
+A AND B AFTER SWAP :	5  6

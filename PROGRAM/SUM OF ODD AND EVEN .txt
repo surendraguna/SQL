@@ -1,0 +1,25 @@
+/* SUM OF ODD AND EVEN */
+
+DECLARE
+    TOTAL INT := 0;
+    T INT := 0;
+    N INT;
+BEGIN
+    N := &N;
+    FOR I IN 1..N
+    LOOP
+		IF MOD(I,2) = 0 THEN
+            	TOTAL := TOTAL + I;
+		ELSE
+			T := T + I;
+		END IF;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('SUM OF EVEN : '||TOTAL);
+    DBMS_OUTPUT.PUT_LINE('SUM OF ODD : '||T);
+END;
+
+OUTPUT :-
+
+SUM OF EVEN : 650
+SUM OF ODD : 625
+

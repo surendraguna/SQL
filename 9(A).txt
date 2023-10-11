@@ -1,0 +1,30 @@
+
+CREATE OR REPLACE FUNCTION OP
+(
+	A IN INT,
+	B IN INT
+)
+RETURN INT
+IS 
+BEGIN
+	DBMS_OUTPUT.PUT_LINE(A+B);
+	DBMS_OUTPUT.PUT_LINE(A-B);
+	DBMS_OUTPUT.PUT_LINE(A*B);
+	DBMS_OUTPUT.PUT_LINE(A/B);
+END; 
+
+DECLARE
+    A INT := &A;
+    B INT := &B;
+    C INT;
+BEGIN
+    C := OP(A, B);
+END;
+
+OUTPUT :- 
+Enter value for a: 5
+Enter value for b: 2
+7
+3
+10
+2.5
