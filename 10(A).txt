@@ -1,0 +1,26 @@
+CREATE OR REPLACE PROCEDURE SUM_D
+(
+	A IN INT,
+	B IN INT,
+	C OUT INT
+)
+IS
+BEGIN	
+	C := A+B;
+	DBMS_OUTPUT.PUT_LINE('SUM ' || C);
+END;
+
+
+DECLARE
+	A INT := &A;
+	B INT := &B;
+	C INT;
+BEGIN 
+	SUM_D(A, B, C);
+END;
+
+OUTPUT := 
+
+Enter value for a: 5
+Enter value for b: 9
+SUM 14

@@ -1,0 +1,16 @@
+/* EVEN OR ODD */
+
+DECLARE
+	I INT;
+BEGIN
+	I := &I;
+	IF MOD(I, 2) != 0 THEN DBMS_OUTPUT.PUT_LINE('ODD');
+	ELSE DBMS_OUTPUT.PUT_LINE('EVEN');
+	END IF;
+END;
+
+OUTPUT :-
+
+Enter value for i: 5
+
+ODD
